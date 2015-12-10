@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata xmlns="http://a15l.com/schemas/serialization/metadata"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://a15l.com/schemas/serialization/metadata http://a15l.com/schemas/serialization/metadata.xsd">
+    <class>
+        <ignore>
+            <property name="ignored"/>
+        </ignore>
+        <types>
+            <property name="fooDate" type="DateTime" value="Y-m-d"/>
+            <property name="bar" type="object" value="a15l\serialization\deserializer\tests\fixtures\Bar"/>
+            <property name="bars" type="object-array" value="a15l\serialization\deserializer\tests\fixtures\Bar"/>
+            <property name="scalarArray" type="scalar-array" value="integer"/>
+        </types>
+        <events>
+            <event type="deserialize" property="fooValue" name="fooValueChange"/>
+        </events>
+    </class>
+</metadata>

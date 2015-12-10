@@ -1,0 +1,26 @@
+{
+  "name": "a15l/serialization-events",
+  "type": "library",
+  "description": "serializer/deserializer events",
+  "keywords": [
+    "serialize",
+    "deserialize",
+    "event",
+    "dispatch"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Schlegel",
+      "email": "info@alexanderschlegel.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "a15l\\serialization\\events\\": ""
+    }
+  }
+}

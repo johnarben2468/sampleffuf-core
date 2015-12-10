@@ -1,0 +1,29 @@
+{
+    "name": "yapcdi/yapcdi",
+    "type": "library",
+    "description": "Yet another PHP CDI",
+    "keywords": ["di", "dependency", "injection", "cdi"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Schlegel",
+            "email": "alexander@yapcdi.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "yapcdi\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "yapcdi\\tests\\": "tests/"
+        }
+    }
+}

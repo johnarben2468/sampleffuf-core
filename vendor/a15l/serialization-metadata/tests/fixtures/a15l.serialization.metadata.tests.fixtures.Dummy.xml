@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata xmlns="http://a15l.com/schemas/serialization/metadata"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://a15l.com/schemas/serialization/metadata http://a15l.com/schemas/serialization/metadata.xsd">
+    <class default-deserialize-event="onDeserialize"
+           default-serialize-event="onSerialize">
+        <readonly>
+            <property name="readonly1"/>
+            <property name="readonly2"/>
+        </readonly>
+        <ignore>
+            <property name="ignored1"/>
+            <property name="ignored2"/>
+        </ignore>
+        <aliases>
+            <alias property="aliasName" name="alias1"/>
+            <alias property="aliasName2" name="alias2"/>
+        </aliases>
+        <types>
+            <property name="foo" type="float"/>
+            <property name="date" type="DateTime" value="Y-m-d"/>
+        </types>
+        <events>
+            <event type="deserialize" property="foo" name="fooDeserialize"/>
+            <event type="serialize" property="bar" name="barSerialize"/>
+        </events>
+    </class>
+</metadata>

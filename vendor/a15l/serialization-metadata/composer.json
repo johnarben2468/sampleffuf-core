@@ -1,0 +1,24 @@
+{
+    "name": "a15l/serialization-metadata",
+    "type": "library",
+    "description": "metadata",
+    "keywords": ["metadata", "class", "config"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Schlegel",
+            "email": "info@alexanderschlegel.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "doctrine/cache": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "a15l\\serialization\\metadata\\": ""
+        }
+    }
+}

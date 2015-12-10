@@ -1,0 +1,50 @@
+{
+    "name": "ffuf/APPLICATION_NAME",
+    "type": "project",
+    "description": "",
+    "keywords": ["web", "app", "application"],
+    "license": "",
+    "authors": [
+        {
+            "name": "Firstname Lastname",
+            "email": "fistname.lastname@ffuf.de"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "require": {
+        "ffuf/coreapp": "dev-master",
+        "xvsys/csrf": "^1.0.0",
+        "xvsys/validator": "^1.0.1",
+        "xvsys/autoresponse": "^1.0.0",
+        "doctrine/orm": "^2.5.0",
+        "monolog/monolog": "^1.13.1",
+        "phastl/phastl": "^1.0.0",
+        "a15l/request-deserializer": "^1.0.0"
+    },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://johnarben2468@bitbucket.org/FFUF/ffuf-coreapp.git"
+        },
+        {
+            "type": "composer",
+            "url": "https://packages.alexanderschlegel.com",
+            "options": {
+                "http": {
+                    "header": [
+                        "ACCOUNT: FFUF",
+                        "TOKEN: 123456"
+                    ]
+                }
+            }
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "abd\\": ""
+
+        }
+    }
+}

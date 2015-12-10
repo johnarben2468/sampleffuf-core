@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata xmlns="http://a15l.com/schemas/serialization/metadata"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://a15l.com/schemas/serialization/metadata http://a15l.com/schemas/serialization/metadata.xsd">
+
+    <class>
+        <readonly>
+                <property name="id"/>
+        </readonly>
+
+    </class>
+</metadata>

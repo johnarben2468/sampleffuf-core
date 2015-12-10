@@ -1,0 +1,44 @@
+{
+  "name": "a15l/deserializer",
+  "type": "library",
+  "description": "deserializer",
+  "keywords": [
+    "deserialize",
+    "json",
+    "xml"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alexander Schlegel",
+      "email": "info@alexanderschlegel.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "a15l/serialization-metadata": "^1.0.0",
+    "a15l/serialization-events": "^1.0.0"
+  },
+  "require-dev": {
+    "doctrine/collections": "^1.3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "a15l\\serialization\\deserializer\\": ""
+    }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.alexanderschlegel.com",
+      "options": {
+        "http": {
+          "header": [
+            "ACCOUNT: A15L",
+            "TOKEN: 6Mqt=;-j4KiEH68,tYcon=FHEhsELy"
+          ]
+        }
+      }
+    }
+  ]
+}

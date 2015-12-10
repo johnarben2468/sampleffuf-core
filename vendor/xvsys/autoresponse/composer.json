@@ -1,0 +1,26 @@
+{
+    "name": "xvsys/autoresponse",
+    "type": "library",
+    "description": "",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Schlegel",
+            "email": "alexander@xvsys.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/http-kernel": "^2.6.6",
+        "xvsys/validator": "^1.0.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "xvsys\\autoresponse\\": "lib/"
+        }
+    }
+}

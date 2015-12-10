@@ -1,0 +1,30 @@
+{
+    "name": "xvsys/csrf",
+    "type": "library",
+    "description": "CSRF-Protection",
+    "keywords": ["csrf", "token", "protection"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Schlegel",
+            "email": "alexander@xvsys.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/http-kernel": "^2.6.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "xvsys\\csrf\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "xvsys\\csrf\\tests\\": "tests/"
+        }
+    }
+}

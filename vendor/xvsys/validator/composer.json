@@ -1,0 +1,30 @@
+{
+    "name": "xvsys/validator",
+    "type": "library",
+    "description": "Exception support for the symfony validator",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Schlegel",
+            "email": "alexander@xvsys.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3",
+        "symfony/validator": "^2.6.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "xvsys\\validator\\": "lib/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "xvsys\\validator\\tests\\": "tests/"
+        }
+    }
+}

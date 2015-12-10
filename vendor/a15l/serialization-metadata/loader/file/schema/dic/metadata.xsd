@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema
+        xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+        xmlns:md="http://a15l.com/schemas/serialization/metadata"
+        targetNamespace="http://a15l.com/schemas/serialization/metadata"
+        elementFormDefault="qualified">
+
+    <xsd:element name="metadata" type="md:metadataType"/>
+
+    <xsd:complexType name="metadataType">
+        <xsd:sequence maxOccurs="1" minOccurs="1">
+            <xsd:element name="class" type="md:classType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="classType">
+        <xsd:sequence>
+            <xsd:choice minOccurs="0" maxOccurs="unbounded">
+                <xsd:element name="readonly" type="md:readonlyType"/>
+                <xsd:element name="ignore" type="md:ignoreType"/>
+                <xsd:element name="aliases" type="md:aliasesType"/>
+                <xsd:element name="events" type="md:eventsType"/>
+                <xsd:element name="types" type="md:dataType"/>
+            </xsd:choice>
+        </xsd:sequence>
+        <xsd:attribute name="ignore-all" type="md:flag" use="optional"/>
+        <xsd:attribute name="default-serialize-event" type="xsd:string" use="optional"/>
+        <xsd:attribute name="default-deserialize-event" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="dataType">
+        <xsd:sequence>
+            <xsd:element name="property" type="md:propertyDataType" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:simpleType name="dataTypes">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="integer"/>
+            <xsd:enumeration value="boolean"/>
+            <xsd:enumeration value="float"/>
+            <xsd:enumeration value="string"/>
+            <xsd:enumeration value="DateTime"/>
+            <xsd:enumeration value="object"/>
+            <xsd:enumeration value="object-array"/>
+            <xsd:enumeration value="array-collection"/>
+            <xsd:enumeration value="scalar-array"/>
+            <xsd:enumeration value="array"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="flag">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="true"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="eventTypes">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="serialize"/>
+            <xsd:enumeration value="deserialize"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="propertyDataType">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+        <xsd:attribute name="type" type="md:dataTypes" use="required"/>
+        <xsd:attribute name="value" type="xsd:string" use="optional"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="eventsType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="event" type="eventType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="eventType">
+        <xsd:attribute name="type" type="md:eventTypes" use="required"/>
+        <xsd:attribute name="property" type="xsd:string" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="aliasesType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="alias" type="md:aliasType"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="aliasType">
+        <xsd:attribute name="property" type="xsd:string" use="required"/>
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="ignoreType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="property" type="md:property"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="readonlyType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="unbounded" name="property" type="md:property"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="property">
+        <xsd:attribute name="name" type="xsd:string" use="required"/>
+    </xsd:complexType>
+
+</xsd:schema>

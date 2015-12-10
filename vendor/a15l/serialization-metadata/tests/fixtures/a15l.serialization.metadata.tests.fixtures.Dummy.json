@@ -1,0 +1,32 @@
+{
+  "default-deserialize-event": "onDeserialize",
+  "default-serialize-event": "onSerialize",
+  "readonly": {
+    "readonly1": true,
+    "readonly2": true
+  },
+  "ignore": {
+    "ignored1": true,
+    "ignored2": true
+  },
+  "aliases": {
+    "aliasName": "alias1",
+    "aliasName2": "alias2"
+  },
+  "types": {
+    "foo": {
+      "float": ""
+    },
+    "date": {
+      "DateTime": "Y-m-d"
+    }
+  },
+  "events": {
+    "foo": {
+      "deserialize": "fooDeserialize"
+    },
+    "bar": {
+      "serialize": "barSerialize"
+    }
+  }
+}
