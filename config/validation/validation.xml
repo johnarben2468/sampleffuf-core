@@ -3,59 +3,7 @@
                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                     xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping http://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
 
-    <class name="abd\app\model\Sampletable">
-        <property name="name">
-                <constraint name="NotBlank">
-                        <option name="message">
-                                Please enter the name1
-                        </option>
-                </constraint>
-                <constraint name="Length">
-                    <option name="min">2</option>
-                    <option name="max">50</option>
-                        <option name="minMessage">
-                            Name must be at least {{ limit }} characters long
-                        </option>
-                    <option name="maxMessage">
-                        Name must be at most {{ limit }} characters long
-                    </option>
-                </constraint>
-        </property>
-        <property name="username">
-            <constraint name="NotBlank">
-                <option name="message">
-                    Please enter the name2
-                </option>
-            </constraint>
-            <constraint name="Length">
-                <option name="min">2</option>
-                <option name="max">50</option>
-                <option name="minMessage">
-                    Username must be at least {{ limit }} characters long
-                </option>
-                <option name="maxMessage">
-                    Username must be at most {{ limit }} characters long
-                </option>
-            </constraint>
-        </property>
-        <property name="password">
-            <constraint name="NotBlank">
-                <option name="message">
-                    Please enter the name3
-                </option>
-            </constraint>
-            <constraint name="Length">
-                <option name="min">2</option>
-                <option name="max">50</option>
-                <option name="minMessage">
-                    Password must be at least {{ limit }} characters long
-                </option>
-                <option name="maxMessage">
-                    Password must be at most {{ limit }} characters long
-                </option>
-            </constraint>
-        </property>
-    </class>
+
     <class name="abd\app\model\Book">
         <property name="title">
             <constraint name="NotBlank">

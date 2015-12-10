@@ -7,23 +7,6 @@
         <default key="_controller">abd\app\controller\Main::getIndexPage</default>
     </route>
 
-    <route id="user" path="/users/" methods="GET">
-        <default key="_controller">abd\app\controller\Users::getList</default>
-    </route>
-
-   <route id="user-create" path="/users/create/" methods="POST">
-       <default key="_controller">abd\app\controller\Users::create</default>
-       <default key="a15l.deserialize.param">sampletable</default>
-       <default key="a15l.deserialize.class">abd\app\model\Sampletable</default>
-   </route>
-    <route id="user-list" path="/display/" methods="GET">
-        <default key="_controller">abd\app\controller\Users::display</default>
-    </route>
-    <route id="user-delete" path="/users/delete/{id}/" methods="GET">
-        <default key="_controller">abd\app\controller\Users::delete</default>
-        <requirement key="id">\d+</requirement>
-    </route>
-
     <route id="book" path="/books/" methods="GET">
         <default key="_controller">abd\app\controller\Books::getList</default>
     </route>
@@ -43,20 +26,13 @@
         <default key="_controller">abd\app\controller\Books::edit</default>
     </route>
 
-    <route id="book-update" path="/books/update/{id}/" methods="PUT">
+    <route id="book-update" path="/books/edit/{id}/" methods="PUT">
         <default key="_controller">abd\app\controller\Books::update</default>
         <requirement key="id">\d+</requirement>
         <default key="a15l.deserialize.param">book</default>
         <default key="a15l.deserialize.class">abd\app\model\Book</default>
     </route>
 
-    <route id="phisix" path="/phisix/" methods="GET">
-        <default key="_controller">abd\app\controller\Phisix::getList</default>
-    </route>
-
-    <route id="phisix-spec" path="/phisix/{symbol}/" methods="GET">
-        <default key="_controller">abd\app\controller\Phisix::getSpec</default>
-    </route>
 
 
 </routes>

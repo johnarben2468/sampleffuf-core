@@ -20,7 +20,7 @@ $this->assign('_title', 'Books Management');
 
 
 
-    <form  action="books/update/<?php echo $book->getId(); ?>/" method="POST">
+    <form  action="books/edit/<?php echo $book->getId(); ?>/" method="POST">
 
 
         <div class="col-lg-6">
